@@ -1,0 +1,333 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 14 10:33:54 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>158 seconds (158140 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest()'><b>LoginToApplicationWithMultipleDataTest</b><br>Test class: TestCases.VerifyMultipleCredentialsTest<br>Parameters: locked_out_user, secret_sauce</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [https://www.saucedemo.com/] but found [https://www.saucedemo.com/inventory.html]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest(VerifyMultipleCredentialsTest.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2146540595", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2146540595'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [https://www.saucedemo.com/] but found [https://www.saucedemo.com/inventory.html]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest(VerifyMultipleCredentialsTest.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>TestCases.VerifyMultipleCredentialsTest@1ef6d34c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.LoginTestPage.verifyTitleofApplication()'><b>verifyTitleofApplication</b><br>Test class: TestCases.LoginTestPage</td>
+<td></td>
+<td>0</td>
+<td>TestCases.LoginTestPage@7e19ebf0</td></tr>
+<tr>
+<td title='TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest()'><b>LoginToApplicationWithMultipleDataTest</b><br>Test class: TestCases.VerifyMultipleCredentialsTest<br>Parameters: standard_user, secret_sauce</td>
+<td></td>
+<td>0</td>
+<td>TestCases.VerifyMultipleCredentialsTest@1ef6d34c</td></tr>
+<tr>
+<td title='TestCases.Inventory_Page_Test.verifyproductLableTest()'><b>verifyproductLableTest</b><br>Test class: TestCases.Inventory_Page_Test<br/>
+<a href="#Output-1876130199" onClick='toggleBox("Output-1876130199", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1876130199" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1876130199">
+Lable of Invetory Page = Products<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>TestCases.Inventory_Page_Test@5717c37</td></tr>
+<tr>
+<td title='TestCases.Inventory_Page_Test.remove2ProductTest()'><b>remove2ProductTest</b><br>Test class: TestCases.Inventory_Page_Test<br/>
+<a href="#Output-1630578421" onClick='toggleBox("Output-1630578421", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1630578421" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1630578421">
+Count of product after removing = 4<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>TestCases.Inventory_Page_Test@5717c37</td></tr>
+<tr>
+<td title='TestCases.CheckOutPage_1_Test.verifyURLCheckOutPage1Test()'><b>verifyURLCheckOutPage1Test</b><br>Test class: TestCases.CheckOutPage_1_Test<br/>
+<a href="#Output-937726434" onClick='toggleBox("Output-937726434", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-937726434" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-937726434">
+Checkout Page 1 Url is = https://www.saucedemo.com/checkout-step-one.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.CheckOutPage_1_Test@2474f125</td></tr>
+<tr>
+<td title='TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest()'><b>LoginToApplicationWithMultipleDataTest</b><br>Test class: TestCases.VerifyMultipleCredentialsTest<br>Parameters: visual_user, secret_sauce</td>
+<td></td>
+<td>0</td>
+<td>TestCases.VerifyMultipleCredentialsTest@1ef6d34c</td></tr>
+<tr>
+<td title='TestCases.LoginTestPage.verifyURLofApplication()'><b>verifyURLofApplication</b><br>Test class: TestCases.LoginTestPage</td>
+<td></td>
+<td>0</td>
+<td>TestCases.LoginTestPage@7e19ebf0</td></tr>
+<tr>
+<td title='TestCases.CheckOutPage_2_Test.clickOnFinishBtnTest()'><b>clickOnFinishBtnTest</b><br>Test class: TestCases.CheckOutPage_2_Test<br/>
+<a href="#Output-1974317504" onClick='toggleBox("Output-1974317504", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1974317504" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1974317504">
+Url of the complete page = https://www.saucedemo.com/checkout-complete.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.CheckOutPage_2_Test@3406472c</td></tr>
+<tr>
+<td title='TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest()'><b>LoginToApplicationWithMultipleDataTest</b><br>Test class: TestCases.VerifyMultipleCredentialsTest<br>Parameters: error_user, secret_sauce</td>
+<td></td>
+<td>0</td>
+<td>TestCases.VerifyMultipleCredentialsTest@1ef6d34c</td></tr>
+<tr>
+<td title='TestCases.Inventory_Page_Test.add6productTest()'><b>add6productTest</b><br>Test class: TestCases.Inventory_Page_Test<br/>
+<a href="#Output-1271481627" onClick='toggleBox("Output-1271481627", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1271481627" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1271481627">
+Total product added to cart = 6<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>TestCases.Inventory_Page_Test@5717c37</td></tr>
+<tr>
+<td title='TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest()'><b>LoginToApplicationWithMultipleDataTest</b><br>Test class: TestCases.VerifyMultipleCredentialsTest<br>Parameters: problem_user, secret_sauce</td>
+<td></td>
+<td>0</td>
+<td>TestCases.VerifyMultipleCredentialsTest@1ef6d34c</td></tr>
+<tr>
+<td title='TestCases.CheckOutPage_2_Test.verifyLableTest()'><b>verifyLableTest</b><br>Test class: TestCases.CheckOutPage_2_Test<br/>
+<a href="#Output-1666522214" onClick='toggleBox("Output-1666522214", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1666522214" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1666522214">
+Lable of check out page 2 = Checkout: Overview<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.CheckOutPage_2_Test@3406472c</td></tr>
+<tr>
+<td title='TestCases.Car_Page_Test.verifyLableCartPageTest()'><b>verifyLableCartPageTest</b><br>Test class: TestCases.Car_Page_Test<br/>
+<a href="#Output-1721073890" onClick='toggleBox("Output-1721073890", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1721073890" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1721073890">
+ Lable of the Cart Page = Your Cart<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.Car_Page_Test@7357a011</td></tr>
+<tr>
+<td title='TestCases.VerifyMultipleCredentialsTest.LoginToApplicationWithMultipleDataTest()'><b>LoginToApplicationWithMultipleDataTest</b><br>Test class: TestCases.VerifyMultipleCredentialsTest<br>Parameters: performance_glitch_user, secret_sauce</td>
+<td></td>
+<td>5</td>
+<td>TestCases.VerifyMultipleCredentialsTest@1ef6d34c</td></tr>
+<tr>
+<td title='TestCases.CheckOutPage_1_Test.inputInformationTest()'><b>inputInformationTest</b><br>Test class: TestCases.CheckOutPage_1_Test<br/>
+<a href="#Output-980607720" onClick='toggleBox("Output-980607720", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-980607720" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-980607720">
+URL of the Checkout page 2 = https://www.saucedemo.com/checkout-step-two.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.CheckOutPage_1_Test@2474f125</td></tr>
+<tr>
+<td title='TestCases.Car_Page_Test.verifyURLOfTheApplication()'><b>verifyURLOfTheApplication</b><br>Test class: TestCases.Car_Page_Test<br/>
+<a href="#Output-126426355" onClick='toggleBox("Output-126426355", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-126426355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-126426355">
+URL of the Page = https://www.saucedemo.com/cart.html<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.Car_Page_Test@7357a011</td></tr>
+<tr>
+<td title='TestCases.LoginTestPage.loginToApplication()'><b>loginToApplication</b><br>Test class: TestCases.LoginTestPage</td>
+<td></td>
+<td>1</td>
+<td>TestCases.LoginTestPage@7e19ebf0</td></tr>
+<tr>
+<td title='TestCases.CheckOutPage_1_Test.verifyTitleOfApplicationTest()'><b>verifyTitleOfApplicationTest</b><br>Test class: TestCases.CheckOutPage_1_Test<br/>
+<a href="#Output-315902506" onClick='toggleBox("Output-315902506", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-315902506" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-315902506">
+Title of the checkout Page = Checkout: Your Information<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestCases.CheckOutPage_1_Test@2474f125</td></tr>
+<tr>
+<td title='TestCases.Inventory_Page_Test.verifyTwitterLogoTest()'><b>verifyTwitterLogoTest</b><br>Test class: TestCases.Inventory_Page_Test<br/>
+<a href="#Output-830710652" onClick='toggleBox("Output-830710652", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-830710652" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-830710652">
+Visibility of the twitter Logo = true<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>TestCases.Inventory_Page_Test@5717c37</td></tr>
+</table><p>
+</body>
+</html>
